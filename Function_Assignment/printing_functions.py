@@ -1,7 +1,19 @@
-def make_car(manufacturer, model, **car_info):
-    car = {'manufacturer': manufacturer, 'model': model}
-    for key, value in car_info.items():
-        car[key] = value
-    return car
-car = make_car('subaru', 'outback', color='blue', tow_package=True)
-print(car)
+
+def show_messages(messages):
+    for message in messages:
+        print(message)
+messages = ['Hello, how are you?', 'What are you up to?', 'Have a great day!']
+show_messages(messages)
+
+def send_messages(messages):
+    sent_messages = []
+    for message in messages:
+        print(message)
+        sent_messages.append(message)
+    return sent_messages
+
+messages = ['Hello, how are you?', 'What are you up to?', 'Have a great day!']
+sent_messages = send_messages(messages[:])
+print(f"Original messages: {messages}")
+print(f"Sent messages: {sent_messages}")
+
